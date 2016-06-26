@@ -9,6 +9,10 @@
   <%= @article.description %>
 </p>
 
-<%= link_to 'Edit', edit_article_path(@article) %> | 
-<%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: 'Are you sure?'} %>
-
+<div>
+  <%= link_to 'Edit', edit_article_path(@article) %> | 
+  <%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: 'Are you sure?'} %>
+</div>
+<div>
+  <%= link_to '-> go back to articles list', articles_path %>
+</div>
