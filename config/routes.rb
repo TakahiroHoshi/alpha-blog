@@ -7,8 +7,10 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'about', to: 'pages#about'
+  get 'users/signup', to: 'users#new'
 
   resources :articles
+  resources :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
