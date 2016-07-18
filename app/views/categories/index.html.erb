@@ -1,16 +1,16 @@
 <h1 align="center">Lisf of all categories</h1>
 <div align="center">
+  <%= will_paginate %>
   <% @categories.each do |cat| %>
     <ul class="listing">
-      <dlv class="row">
-        <div class="col-xs-8 col-xs-offset-2">
-          <div class="well well-lg">
-            <div class="article-title">
-              <%= link_to cat.name, category_path(cat) %>
-            </div>
-          </div>
+      <div class="row">
+        <div class="well col-xs-4 col-xs-offset-4">
+          <li class="article-title">
+            <%= link_to cat.name, category_path(cat) %>
+          </li>
         </div>
       </div>
     </ul>
   <% end %>
+  <%= will_paginate %>
 </dlv>
